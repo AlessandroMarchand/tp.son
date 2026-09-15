@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from IPython.display import Audio, display
+from scipy.io import wavfile
+
+#il faut 44.100 echantillons
+#c'est sin(2piphit)
+
+phi=440
+tabx=np.linspace(0,5*10**(-3),44100)
+taby=np.sin(2*np.pi*phi*tabx)
+plt.plot(tabx,taby)
+plt.show()
+
+display(Audio(taby,44100))
